@@ -1,22 +1,22 @@
-function lowerCaseDrivers(arr) {
-  const newArr = arr.map(function(cb) { return cb.toLowerCase() })
-  return newArr;
+function lowerCaseDrivers(drivers) {
+  const lowercasedDrivers = drivers.map(function(driver) {
+    return driver.toLowerCase();
+  })
+  return lowercasedDrivers;
 }
 
-function nameToAttributes(arr) {
-  const newArr = arr.map(function(name) {
-    let first;
-    let last;
-    first = name.split(" ")[0];
-    last = name.split(" ")[1];
-    return {firstName: first, lastName: last}
+function nameToAttributes(drivers) {
+  const newDrivers = drivers.map(function(driver) {
+    const first = driver.split(" ")[0];
+    const last = driver.split(" ")[1];
+    return {firstName: first, lastName: last};
   })
-  return newArr;
+  return newDrivers;
 }
 
-function attributesToPhrase(arr) {
-  const newArr = arr.map(function(driver) {
-    return `${driver.name} is from ${driver.hometown}`
+function attributesToPhrase(drivers) {
+  const result = drivers.map(function(driver) {
+    return `${driver.name} is from ${driver.hometown}`;
   })
-  return newArr;
+  return result;
 }
